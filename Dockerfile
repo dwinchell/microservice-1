@@ -5,5 +5,5 @@ ENV HTML_TITLE="Hello World!"
 
 ADD src/* /var/www/html
 
-CMD sh -c "sed -i \"s/PLACEHOLDER_TITLE/$HTML_TITLE/\" /var/www/html/index.html && run-httpd
+CMD sh -c "sed -i \"s/PLACEHOLDER_TITLE/$HTML_TITLE/\" /var/www/html/index.html && run-httpd"
 
