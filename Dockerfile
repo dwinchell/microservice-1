@@ -9,5 +9,5 @@ USER 0
 RUN chmod 666 /var/www/html/*
 USER 1001
 
-CMD sh -c "sed -i \"s/PLACEHOLDER_TITLE/$HTML_TITLE/\" /var/www/html/index.html && run-httpd"
+CMD sh -c "sed \"s/PLACEHOLDER_TITLE/$HTML_TITLE/\" /var/www/html/index.html > /tmp/index.html.tmp && cp /tmp/index.html.tmp /var/www/html/index.html && run-httpd"
 
